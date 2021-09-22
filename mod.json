@@ -1,0 +1,8 @@
+{
+	"Name": "VU-Easy-Settings",
+	"Authors": ["KVN, IllustrisJack"],
+	"Description": "Change FB Settings easy peasy lemon squeezy",
+	"Version": "0.1.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
