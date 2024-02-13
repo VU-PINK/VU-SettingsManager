@@ -14,11 +14,11 @@ function SettingsManager:RegisterVars()
 end
 
 function SettingsManager:RegisterEvents()
-    self.m_OnLevelLoadedEvent = Events:Subscribe("Player:Respawn" , self, self.OnLevelLoaded)
+    self.m_OnPlayerSpawn = Events:Subscribe("Player:Respawn" , self, self.OnPlayerSpawn)
     self.m_OnExtensionUnloadEvent = Events:Subscribe('Extension:Unloading', self, self.OnExtensionUnload)
 end
 
-function SettingsManager:OnLevelLoaded()
+function SettingsManager:OnPlayerSpawn()
     if g_Prints then
         print("*Applying Settings")
     end
