@@ -14,7 +14,7 @@ function SettingsManager:RegisterVars()
 end
 
 function SettingsManager:RegisterEvents()
-    self.m_OnLevelLoadedEvent = Events:Subscribe("Level:Loaded" , self, self.OnLevelLoaded)
+    self.m_OnLevelLoadedEvent = Events:Subscribe("Player:Respawn" , self, self.OnLevelLoaded)
     self.m_OnExtensionUnloadEvent = Events:Subscribe('Extension:Unloading', self, self.OnExtensionUnload)
 end
 
@@ -66,7 +66,7 @@ function SettingsManager:ResetSettings()
 
         for l_Setting, l_Value in pairs(l_Settings) do
             if g_Prints then
-                print("*Resetting " .. tostring(l_Setting) .. " to " .. tostring(l_Setting))
+                print("*Resetting " .. tostring(l_Setting) .. " to " .. tostring(l_Value))
             end
             l_TempSettingGroup[l_Setting] = l_Value
         end
